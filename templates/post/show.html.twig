@@ -3,28 +3,12 @@
 {% block title %}Post{% endblock %}
 
 {% block body %}
-    <h1>Post</h1>
+    <div class="container pt-5">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="post-content">
+            {{ post.content }}
+        </div>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ post.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ post.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ post.content }}</td>
-            </tr>
-            <tr>
-                <th>Slug</th>
-                <td>{{ post.slug }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_post_index') }}">back to list</a>
+        <a href="{{ path('app_post_index') }}">back to list</a>
+    </div>
 {% endblock %}

@@ -7,11 +7,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PostController extends AbstractController
 {
-    #[Route('/post', name: 'post_index')]
+    #[Route('/', name: 'post_index')]
     public function index(): Response
     {
-        return new Response(
-            '<html><body>Wild Series Index</body></html>'
-        );
+        return $this->render('posts/posts-listing.html.twig', [
+            'title' => 'Listing des articles',
+        ]);
     }
 }

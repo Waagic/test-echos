@@ -1,0 +1,26 @@
+.post-card {
+  &-content {
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: all 0.3s ease;
+    opacity: 70%;
+
+    &:hover{
+      border-radius: 0;
+      opacity: 100%;
+    }
+  }
+  &-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &-text {
+    padding-top: 10px;
+  }
+}
